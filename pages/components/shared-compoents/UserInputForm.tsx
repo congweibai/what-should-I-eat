@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { PlusSmIcon as PlusSmIconSolid } from "@heroicons/react/solid";
+import { AppProps } from "next/app";
 
-function UserInputForm({
-  addNewOption,
-}: {
+interface UserInputFormsProps {
   addNewOption: (option: string) => void;
-}) {
+  className: string;
+}
+
+function UserInputForm({ addNewOption, className }: UserInputFormsProps) {
   const [option, setOption] = useState("");
   const handleSubmit = (e: any) => {
     e.preventDefault();
@@ -17,6 +19,7 @@ function UserInputForm({
   return (
     <>
       <form
+        className={className}
         onSubmit={(e) => {
           handleSubmit(e);
         }}

@@ -1,6 +1,6 @@
 # what-should-I-eat
 
-1. ☐ Random pick from user input options
+1. ☑ Random pick from user input options
 
 1. ☐ Grab from local restaurants
 
